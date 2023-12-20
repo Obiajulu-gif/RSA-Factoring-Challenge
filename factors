@@ -2,6 +2,7 @@
 
 import sys
 
+
 def factorize(number):
     factors = []
     for i in range(2, number):
@@ -9,6 +10,7 @@ def factorize(number):
             factors.append((i, number // i))
             break
     return factors
+
 
 def main():
     file_path = sys.argv[1]
@@ -20,6 +22,7 @@ def main():
             factorizations.append(f"{number}={factors[0][0]}*{factors[0][1]}")
         for factorization in factorizations:
             print(factorization)
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
