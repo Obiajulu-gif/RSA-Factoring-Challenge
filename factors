@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+
+import sys
+
+
+def factorize(number):
+    factors = []
+    for i in range(2, number):
+        if number % i == 0:
+            factors.append((i, number // i))
+    return factors
+
+
+def main():
+    file_path = sys.argv[1]
+    with open(file_path, 'r') as file:
+        factorizations = []
+        for line in file:
+            number = int(line.strip())
+            factors = factorize(number)
+            factorizations.append(f"{number}={factors[0][0]}*{factors[0][1]}")
+        for factorization in factorizations:
+            print(factorization)
+
+
+if __name__ == '__main__':
+    main()
