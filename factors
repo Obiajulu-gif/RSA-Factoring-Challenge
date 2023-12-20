@@ -4,6 +4,9 @@ import sys
 
 
 def factorize(number):
+    """
+    function to factorize number
+    """
     factors = []
     for i in range(2, number):
         if number % i == 0:
@@ -13,6 +16,9 @@ def factorize(number):
 
 
 def main():
+    """
+    main function to read file and print factorization
+    """
     file_path = sys.argv[1]
     with open(file_path, 'r') as file:
         factorizations = []
